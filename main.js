@@ -109,7 +109,7 @@ ex = Ctor.prototype.whatsThis();
 
 // Exercise 11
 
-ex = var newObject = new Ctor();
+var newObject = ex = new Ctor();
 
 
 
