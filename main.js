@@ -2,7 +2,11 @@
  * Set-up
  */
 
-var global = global || window;
+var global;
+
+if ('window' in this) {
+    global = this.window;
+}
 
 var obj = {
     id: 'object',
