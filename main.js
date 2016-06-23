@@ -15,14 +15,14 @@ var obj = {
     }
 };
 
-function func() {
+function Ctor() {
     this.id = 'constructor';
     whatsThis.call(this);
 }
 
-func.whatsThis = whatsThis;
+Ctor.whatsThis = whatsThis;
 
-func.prototype.whatsThis = whatsThis;
+Ctor.prototype.whatsThis = whatsThis;
 
 var tricky = {
     id: 'tricky'
@@ -88,19 +88,19 @@ whatsThis.apply(tricky);
 
 // Exercise 9
 
-func();
+Ctor();
 
 
 
 // Exercise 10
 
-func.prototype.whatsThis();
+Ctor.prototype.whatsThis();
 
 
 
 // Exercise 11
 
-var newObject = new func();
+var newObject = new Ctor();
 
 
 
