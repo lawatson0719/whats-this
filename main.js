@@ -2,9 +2,7 @@
  * Set-up
  */
 
-function whatsThis() {
-    console.log('This is...', this);
-}
+var global = global || window;
 
 var obj = {
     id: 'object',
@@ -15,15 +13,6 @@ var obj = {
     }
 };
 
-function Ctor() {
-    this.id = 'constructor';
-    whatsThis.call(this);
-}
-
-Ctor.whatsThis = whatsThis;
-
-Ctor.prototype.whatsThis = whatsThis;
-
 var tricky = {
     id: 'tricky'
 };
@@ -32,6 +21,19 @@ var location = {
     state: 'Alaska',
     city: 'Anchorage'
 };
+
+function whatsThis() {
+    console.log('This is...', this);
+}
+
+function Ctor() {
+    this.id = 'constructor';
+    whatsThis.call(this);
+}
+
+Ctor.whatsThis = whatsThis;
+
+Ctor.prototype.whatsThis = whatsThis;
 
 
 
@@ -47,7 +49,7 @@ whatsThis();
 
 // Exercise 2
 
-window.whatsThis();
+global.whatsThis();
 
 
 
