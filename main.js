@@ -2,8 +2,10 @@
  * Set-up
  */
 
-if ('window' in this) {
-    global = this.window;
+if (typeof window === 'undefined') {
+    global.whatsThis = whatsThis;
+} else {
+    global = window;
 }
 
 var obj = {
@@ -116,12 +118,12 @@ newObject.whatsThis();
 
 // Exercise 13
 
-object.whatsThis.call(tricky);
+obj.whatsThis.call(tricky);
 
 
 
 // Exercise 14
 
-whatsThis.bind(object.inner).call(location);
+whatsThis.bind(obj.inner).call(location);
 
 
