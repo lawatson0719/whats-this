@@ -27,7 +27,7 @@ var location = {
 };
 
 function whatsThis() {
-    console.log('This is...', this);
+    return this;
 }
 
 function Ctor() {
