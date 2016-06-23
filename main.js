@@ -74,58 +74,53 @@ ex = obj.inner.whatsThis();
 
 // Exercise 5
 
-ex = obj.inner.whatsThis();
+ex = whatsThis.call(null);
 
 
 
 // Exercise 6
 
-ex = whatsThis.call(null);
+ex = whatsThis.call(location);
 
 
 
 // Exercise 7
 
-ex = whatsThis.call(location);
-
-
-// Exercise 8
-
 ex = whatsThis.apply(tricky);
 
 
 
-// Exercise 9
+// Exercise 8
 
 ex = Ctor();
 
 
 
-// Exercise 10
+// Exercise 9
 
 ex = Ctor.prototype.whatsThis();
 
 
 
-// Exercise 11
+// Exercise 10
 
 var newObject = ex = new Ctor();
 
 
 
-// Exercise 12
+// Exercise 11
 
 ex = newObject.whatsThis();
 
 
 
-// Exercise 13
+// Exercise 12
 
 ex = obj.whatsThis.call(tricky);
 
 
 
-// Exercise 14
+// Exercise 13
 
 ex = whatsThis.bind(obj.inner).call(location);
 
