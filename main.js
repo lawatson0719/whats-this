@@ -2,8 +2,6 @@
  * Set-up
  */
 
-var global;
-
 if ('window' in this) {
     global = this.window;
 }
