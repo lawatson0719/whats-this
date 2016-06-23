@@ -27,6 +27,7 @@ var location = {
 };
 
 function whatsThis() {
+    console.log('This is...', this);
     return this;
 }
 
@@ -45,85 +46,87 @@ Ctor.prototype.whatsThis = whatsThis;
  * Exercises
  */
 
+var ex;
+
 // Exercise 1
 
-whatsThis();
+ex = whatsThis();
 
 
 
 // Exercise 2
 
-global.whatsThis();
+ex = global.whatsThis();
 
 
 
 // Exercise 3
 
-obj.whatsThis();
+ex = obj.whatsThis();
 
 
 
 // Exercise 4
 
-obj.inner.whatsThis();
+ex = obj.inner.whatsThis();
 
 
 
 // Exercise 5
 
-obj.inner.whatsThis();
+ex = obj.inner.whatsThis();
 
 
 
 // Exercise 6
 
-whatsThis.call(null);
+ex = whatsThis.call(null);
 
 
 
 // Exercise 7
 
-whatsThis.call(location);
+ex = whatsThis.call(location);
 
 
 // Exercise 8
 
-whatsThis.apply(tricky);
+ex = whatsThis.apply(tricky);
 
 
 
 // Exercise 9
 
-Ctor();
+ex = Ctor();
 
 
 
 // Exercise 10
 
-Ctor.prototype.whatsThis();
+ex = Ctor.prototype.whatsThis();
 
 
 
 // Exercise 11
 
-var newObject = new Ctor();
+ex = var newObject = new Ctor();
 
 
 
 // Exercise 12
 
-newObject.whatsThis();
+ex = newObject.whatsThis();
 
 
 
 // Exercise 13
 
-obj.whatsThis.call(tricky);
+ex = obj.whatsThis.call(tricky);
 
 
 
 // Exercise 14
 
-whatsThis.bind(obj.inner).call(location);
+ex = whatsThis.bind(obj.inner).call(location);
 
 
