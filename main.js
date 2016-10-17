@@ -17,10 +17,6 @@ var obj = {
     }
 };
 
-var tricky = {
-    id: 'tricky'
-};
-
 var location = {
     state: 'Alaska',
     city: 'Anchorage'
@@ -35,8 +31,6 @@ function Ctor() {
     this.ownProperty = 'blah';
     console.log('This is...', this);
 }
-
-Ctor.whatsThis = whatsThis;
 
 Ctor.prototype.whatsThis = whatsThis;
 
@@ -86,7 +80,7 @@ ex = whatsThis.call(location);
 
 // Exercise 7
 
-ex = whatsThis.apply(tricky);
+ex = whatsThis.apply(location);
 
 
 
@@ -104,19 +98,19 @@ ex = Ctor.prototype.whatsThis();
 
 // Exercise 10
 
-var newObject = ex = new Ctor();
+var ctorInstance = ex = new Ctor();
 
 
 
 // Exercise 11
 
-ex = newObject.whatsThis();
+ex = ctorInstance.whatsThis();
 
 
 
 // Exercise 12
 
-ex = obj.whatsThis.call(tricky);
+ex = obj.whatsThis.call(ctorInstance);
 
 
 
