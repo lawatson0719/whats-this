@@ -32,8 +32,8 @@ function whatsThis() {
 }
 
 function Ctor() {
-    this.id = 'constructor';
-    whatsThis.call(this);
+    this.ownProperty = 'blah';
+    console.log('This is...', this);
 }
 
 Ctor.whatsThis = whatsThis;
